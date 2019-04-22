@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+
+<upgrade>
+	<image path="images/turbines.bmp"/>
+	<image-cancel path="../ap_shell/images/cancel.bmp"/>
+	<time value="300"/>
+	<unit-requirements>
+		<unit name="hangar" />
+	</unit-requirements>
+	<upgrade-requirements/>
+	<resource-requirements>
+		<resource name="gold" amount="500"/>
+	</resource-requirements>
+	<effects>
+		<unit name="gunship"/>
+		<unit name="fighter"/>
+	</effects>
+	<max-hp value="0"/>
+	<max-ep value="0"/>
+	<sight value="0"/>
+	<attack-strenght value="0"/>
+	<attack-range value="0"/>
+	<armor value="0"/>
+	<move-speed value="100"/>
+	<production-speed value="0"/>
+</upgrade>

@@ -1,0 +1,255 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="4" />
+		<height value="5" />
+		<max-hp value="6000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="20" />
+		<armor-type value="structure"/>
+		<sight value="6" />
+		<time value="100" />
+		<multi-selection value="false" />
+		<cellmap value="true">
+			<row value="1111"/>
+			<row value="1001"/>
+			<row value="1001"/>
+			<row value="1001"/>
+			<row value="0000"/>
+			<row value="0000"/>
+			<row value="0000"/>
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false" />
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements />
+		<resource-requirements>
+			<resource name="gold" amount="500" />
+		</resource-requirements>
+		<resources-stored />
+		<image path="images/factory.bmp" />
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="true" image-path="images/meetingpoint.bmp"/>
+		<selection-sounds enabled="true">
+			<sound path="sounds/steammach.wav" />
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="sounds/steammach.wav" />
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+		<!-- *** skill 0 *** -->
+
+		<skill>
+			<type value="stop"/>	
+			<name value="stop_skill"/>
+			<ep-cost value="0" />
+			<speed value="50" />
+			<anim-speed value="20" />
+			<animation path="factory.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<!-- *** skill 1 *** -->
+		<skill>
+			<type value="be_built" />	
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="tentbuild.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+		<!-- *** skill 2 *** -->
+		<skill>
+			<type value="upgrade"/>	
+			<name value="upgrade_skill"/>	
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="factory.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<!-- *** skill 3 *** -->
+		<skill>
+			<type value="produce"/>
+			<name value="produce_skill"/>	
+			<ep-cost value="0" />
+			<speed value="500" />
+			<anim-speed value="20" />
+			<animation path="factory.g3d" />
+			<sound enabled="false" />
+		</skill>	
+
+		<skill>
+			<type value="produce"/>
+			<name value="advance_skill"/>	
+			<ep-cost value="0" />
+			<speed value="200" />
+			<anim-speed value="20" />
+			<animation path="factory.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+		<!-- *** skill 4 *** -->
+		<skill>
+			<type value="die" />	
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="80" />
+			<animation path="dead/factorydie.g3d" />
+			<sound enabled="true" start-time="0">
+				<sound-file path="/sounds/tech_building_fall4.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>
+	
+		<!-- *** command 1 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_dozer" />
+			<image path="../dozer/images/dozer.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="dozer"/>
+		</command>
+		<command>
+			<type value="produce"/>
+			<name value="deploy_gi" />
+			<image path="../gi/images/giimg.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="gi"/>
+		</command>
+		
+		<command>
+			<type value="produce"/>
+			<name value="deploy_defender" />
+			<image path="../defender/images/defender.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="defender"/>
+		</command>
+		
+		<command>
+			<type value="produce"/>
+			<name value="deploy_gnome" />
+			<image path="../gnome/images/gnome.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="gnome"/>
+		</command>	
+	
+		<!-- *** command 3 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_ranger" />
+			<image path="../ranger/images/ranger_img.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="ranger"/>
+		</command>
+		
+		<!-- *** command 4 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_halftrack" />
+			<image path="../halftrack/images/halftrack.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="halftrack"/>
+		</command>
+
+		<!-- *** command 5 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_sabre" />
+			<image path="../sabre/images/sabre.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="sabre"/>
+		</command>		
+		
+		<command>
+			<type value="produce"/>
+			<name value="deploy_officer" />
+			<image path="../officer/images/officer.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="officer"/>
+		</command>
+		
+		<!-- *** command 6 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_crusader" />
+			<image path="../crusader/images/crusader_img.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="crusader"/>
+		</command>	
+
+		<!-- *** command 7 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_ironfist" />
+			<image path="../ironfist/images/ironfist.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="ironfist"/>
+		</command>			
+
+		<!-- *** command 8 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_bullfrog" />
+			<image path="../bullfrog/images/bullfrog.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="bullfrog"/>
+		</command>
+
+		
+		<!-- *** command 9 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_paladin_rocket" />
+			<image path="../paladinrocket/images/rocket.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="advance_skill"/>
+			<produced-unit name="paladinrocket"/>
+		</command>		
+				
+
+	</commands>
+</unit>

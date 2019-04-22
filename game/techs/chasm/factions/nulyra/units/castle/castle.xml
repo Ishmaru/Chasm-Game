@@ -1,0 +1,155 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="5" />
+		<height value="6" />
+		<max-hp value="9000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="40" />
+		<armor-type value="structure"/>				
+		<sight value="15" />
+		<time value="300" />
+		<multi-selection value="false" />
+		<cellmap value="true">
+			<row value="11011"/>
+			<row value="11011"/>
+			<row value="00000"/>
+			<row value="11011"/>
+			<row value="11011"/>
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+    		<resources-death>
+        		<resource name="oil" amount-faction-percent="100" loss-faction-percent="25"  allow-negative="false" />
+        		<resource name="gold" amount-faction-percent="100" loss-faction-percent="25"  allow-negative="false" />
+        		<resource name="food" amount-faction-percent="100" loss-faction-percent="25"  allow-negative="false" />
+    		</resources-death>
+		<light enabled="true" red="1" green="1" blue="1"/>
+		<unit-requirements/>
+		<upgrade-requirements />
+		<resource-requirements>
+			<resource name="gold" amount="800" />
+		</resource-requirements>
+		<resources-stored>
+			<resource name= "gold" amount="3000"/>
+			<resource name= "oil" amount="2000"/>	
+			<resource name= "food" amount="50"/>	
+		</resources-stored>
+		<image path="images/hq.bmp" />
+		<image-cancel path="images/cancel.bmp"/>
+		<meeting-point value="true" image-path="../barracks/images/meetingpoint.bmp"/>
+		<selection-sounds enabled="true">
+			<sound path="../barracks/sounds/steammach.wav" />
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="../barracks/sounds/steammach.wav" />
+		</command-sounds>
+	</parameters>
+	
+		<attack-boosts>
+		<attack-boost name="national">
+			<allow-multiple-boosts value="false" />
+			<radius value="20" />
+			<target value="ally"/>
+			<max-hp value="0" regeneration="10"/>
+			<max-ep value="0"/>
+			<sight value="0" />
+			<attack-strenght value="25" value-percent-multiplier="true"/>
+			<attack-range value="0" />
+			<armor value="10" />
+			<move-speed value="15" value-percent-multiplier="true"/>
+			<production-speed value="0" />
+				<particles value="true">
+					<affected-particle-file path="national.xml"/>
+				</particles>
+		</attack-boost>
+	</attack-boosts>
+	
+	<!-- *** skills *** -->
+	<skills>
+
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="20" />
+			<animation path="castlestand.g3d" />
+			<sound enabled="false" />
+			<attack-boost name="national" />
+		</skill>
+		
+		<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="30" />
+			<animation path="castlebuild.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+		<skill>
+			<type value="produce" />
+			<name value="produce_skill"/>		
+			<ep-cost value="0" />
+			<speed value="800" />
+			<anim-speed value="20" />
+			<animation path="castlestand.g3d" />
+			<sound enabled="false" />
+			<attack-boost name="national" />
+		</skill>	
+		
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="castledie.g3d" />
+			<sound enabled="true" start-time="0">
+				<sound-file path="../barracks/sounds/tech_building_fall4.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>
+	
+		<command>
+			<type value="produce"/>
+			<name value="deploy_worker" />
+			<image path="../worker/images/workerimg.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="worker"/>
+		</command>	
+		<command>
+			<type value="produce"/>
+			<name value="buy_oil" />
+			<image path="../buy_oil/images/buyoil.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="buy_oil"/>
+		</command>	
+		<command>
+			<type value="produce"/>
+			<name value="sell_oil" />
+			<image path="../sell_oil/images/selloil.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="sell_oil"/>
+		</command>	
+	</commands>
+</unit>

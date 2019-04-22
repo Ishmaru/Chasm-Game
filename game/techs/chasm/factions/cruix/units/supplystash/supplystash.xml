@@ -1,0 +1,96 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="2" />
+		<height value="5" />
+		<max-hp value="3000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="20" />
+		<armor-type value="structure"/>				
+		<sight value="5" />
+		<time value="50" />
+		<multi-selection value="false" />
+		<count-in-victory-conditions value="false"/>
+		<cellmap value="true">
+			<row value="11" /> 
+			<row value="11" />  
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false" />
+		<unit-requirements/>
+		<upgrade-requirements />
+		<resource-requirements>
+			<resource name="gold" amount="100"/>
+			<resource name="food" amount="-15"/>
+		</resource-requirements>
+		<resources-stored>
+			<resource name="food" amount="15"/>
+
+		</resources-stored>
+		<image path="images/supply.bmp"/>
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="true" image-path="../factory/images/meetingpoint.bmp"/>
+		<selection-sounds enabled="true">
+			<sound path="amb.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="amb.wav"/>
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+
+		<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="120"/>
+			<speed value="120"/>
+			<anim-speed value="50" />
+			<animation path="supplystashbuild.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="supplystash.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="80" />
+			<animation path="dead/supplydie.g3d" />
+			<sound enabled="true" start-time="0">
+				<sound-file path="../factory/sounds/tech_building_fall4.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>
+	
+
+
+	</commands>
+</unit>

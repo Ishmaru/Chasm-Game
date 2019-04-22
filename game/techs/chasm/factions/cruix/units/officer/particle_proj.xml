@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<projectile-particle-system>
+    	<texture value="true" path="../../../../../../data/core/misc_textures/particle_1.bmp" luminance="true"/>
+    	<model value="true" path="officer/v2.g3d"/>
+	<primitive value="quad"/>
+	<offset x="8" y="15" z="-10"/>
+	<color red="0.5" green="0.5" blue="0.5" alpha="0.4" />
+	<color-no-energy red="0.0" green="0.0" blue="0.0" alpha="0.1" />
+    	<size value="1" />
+    	<size-no-energy value="2" />
+    	<speed value="5.0" />
+	<gravity value="0"/>
+    	<emission-rate value="1" />
+    	<energy-max value="20" />
+    	<energy-var value="2" />
+	
+	<trajectory type="linear">
+		<speed value="25"/>
+		<scale value="0"/>
+	</trajectory>
+</projectile-particle-system>

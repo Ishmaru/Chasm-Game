@@ -1,0 +1,64 @@
+<?xml version="1.0" standalone="no"?>
+
+<faction>
+	<starting-resources>
+		<resource name="gold" amount="1250"/>
+		<resource name="oil" amount="100"/>
+		<resource name="food" amount="50"/>	
+	</starting-resources>
+	<starting-units>
+		<unit name="castle" amount="1"/>
+		<unit name="pillbox" amount="1"/>
+		<unit name="plant" amount="0"/>
+		<unit name="factory" amount="0"/>
+		<unit name="house" amount="1"/>
+		<unit name="storage" amount="0"/>
+		<unit name="dozer" amount="1"/>
+		<unit name="worker" amount="5"/>
+		<unit name="gi" amount="0"/>
+		<unit name="defender" amount="0"/>
+		<unit name="ranger" amount="0"/>
+		<unit name="sabre" amount="0"/>
+		<unit name="crusader" amount="0"/>
+		<unit name="ironfist" amount="0"/>
+		<unit name="bullfrog" amount="0"/>
+		<unit name="gunship" amount="0"/>
+		<unit name="gnome" amount="0"/>
+		<unit name="fighter" amount="0"/>
+		<unit name="halftrack" amount="0"/>
+		<unit name="paladinrocket" amount="0"/>
+		<unit name="paladin_airship" amount="0"/>
+		<unit name="dreadnaught" amount="0"/>
+		<unit name="torpedo_frigate" amount="0"/>
+				<unit name="officer" amount="0"/>
+	</starting-units>	
+	<music value="true" path="music/gregoire_lourme_-_sky_warriors.ogg"/>
+	
+		<healthbar>
+			<height value="1"/>
+			<thickness value="0.2"/>
+			<visible value="selected"/>
+	</healthbar>
+	
+	<ai-behavior>
+		<worker-units>
+			<unit name="worker" minimum="15"/>
+		</worker-units>
+		<warrior-units/>
+		<resource-producer-units/>
+		<building-units>
+			<unit name="factory" minimum="1"/>
+			<unit name="supplystash" minimum="3"/>
+			<unit name="hangar" minimum="1"/>
+			<unit name="plant" minimum="1"/>
+		</building-units>
+		<static-values>
+			<static type-name="MinStaticResourceCount" value="10"/>
+			<static type-name="MaxExpansions" value="8"/>
+			<static type-name="MinWorkerAttackersHarvesting" value="10"/>
+			<static type-name="MinBuildSpacing" value="3"/>
+			<static type-name="MinMinWarriors" value="3"/>
+			<static type-name="MaxMinWarriors" value="4"/>
+		</static-values>
+	</ai-behavior>
+</faction>

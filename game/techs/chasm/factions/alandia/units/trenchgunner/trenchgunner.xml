@@ -1,0 +1,190 @@
+<?xml version="1.0" standalone="no"?>
+
+<unit>
+
+	<!-- *** parameters *** -->
+
+	<parameters>
+		<size value="1"/>
+		<height value="2"/>
+		<max-hp value="900" regeneration="5"/>
+		<max-ep value="0"/>
+		<armor value="5"/>	
+		<armor-type value="normal"/>				
+		<sight value="15"/>
+		<time value="35"/>	
+		<multi-selection value="true"/>	
+		<cellmap value="false"/>
+		<levels>
+			<level name="experenced" kills="1"/>
+			<level name="veteran" kills="3"/>
+			<level name="elite" kills="6"/>
+		</levels>
+		<fields>
+			<field value="land"/>
+		</fields>	
+		<properties/>
+		<light enabled="false"/>
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements/>
+		<resource-requirements>
+			<resource name="gold" amount="100"/>
+			<resource name="food" amount="1"/>				
+		</resource-requirements>
+		<resources-stored/>
+		<image path="images/trenchgunner.bmp"/>
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+			<sound path="sounds/malea_select1.wav"/>
+			<sound path="sounds/malea_select2.wav"/>
+			<sound path="sounds/malea_select3.wav"/>
+			<sound path="sounds/malea_select4.wav"/>
+			<sound path="sounds/malea_select5.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="sounds/malea_ack1.wav"/>
+			<sound path="sounds/malea_ack2.wav"/>
+			<sound path="sounds/malea_ack3.wav"/>
+			<sound path="sounds/malea_ack4.wav"/>
+		</command-sounds>
+	</parameters>
+
+
+	<!-- *** skills *** -->
+
+	<skills>
+	
+		<skill>
+			<type value="stop"/>
+			<name value="stop_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="1000"/>
+			<anim-speed value="20"/>
+			<animation path="trenchgunnerstand.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+		
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="220"/>
+			<anim-speed value="125"/>
+			<animation path="trenchgunnerrun.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="move"/>
+			<name value="run_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="300"/>
+			<anim-speed value="180"/>
+			<animation path="trenchgunnerrun.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="attack"/>
+			<name value="attack_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="300"/>
+			<anim-speed value="320"/>
+			<animation path="trenchgunnershoot.g3d"/>
+				<particles value="true">	
+				<particle-file path="cannon_particles.xml"/>
+				</particles>	
+			<sound enabled="true" start-time="0.1">
+				<sound-file path="/sounds/trench_attack.wav"/>
+
+			</sound>
+			<attack-strenght value="40"/>
+			<attack-var value="30"/>
+			<attack-range value="10"/>
+			<attack-type value="normal"/>
+			<attack-start-time value="0.1"/>
+			<attack-fields>
+				<field value="land"/>
+				<field value="air"/>
+			</attack-fields>
+			<projectile value="true">
+				<particle value="true" path="particle_proj.xml"/>
+				<sound enabled="true">
+					<sound-file path="/sounds/bullet_hit.wav"/>
+
+				</sound>
+			</projectile>
+			<splash value="true">
+				<radius value="0"/>
+				<damage-all value="true"/>
+				<particle value="true" path="particle_splash.xml"/>
+
+			</splash>
+		</skill>
+		
+		<skill>
+			<type value="die"/>
+			<name value="die_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="60"/>
+			<anim-speed value="80"/>
+			<animation path="trenchgunnerdie.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/malea_die1.wav"/>
+				<sound-file path="sounds/malea_die2.wav"/>
+				<sound-file path="sounds/malea_die3.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+
+	</skills>
+
+	<!-- *** commands *** -->
+	
+	<commands>
+		
+		<command>
+			<type value= "stop"/>
+			<name value="stop"/>
+			<image path="../castle/images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+
+		<command>
+			<type value="move"/>
+			<name value="move"/>
+			<image path="../castle/images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+
+		<command>
+			<type value="attack"/>
+			<name value="attack"/>
+			<image path="../castle/images/gun.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="attack_skill"/>
+		</command>
+		
+		<command>
+			<type value="attack_stopped"/>
+			<name value="hold_position"/>
+			<image path="../castle/images/hold.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+			<attack-skill value="attack_skill"/>
+		</command>
+
+
+		
+	</commands>
+</unit>

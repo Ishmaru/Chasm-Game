@@ -1,0 +1,77 @@
+TUTORIAL_NAME=#1 Basiskursus
+;message headers
+GlestBasicTutorial=Megaglest begynderkursus
+WellDone=Godt klaret!
+Resources=Ressourcer
+Combat=Kamp
+Buildings=Bygninger
+Tricks=Tricks
+
+;message strings
+;------------------------------------------Start------------------------------------------------
+Welcome=Velkommen til Megaglest basiskursus.
+
+FirstThing=Udsigt: For at justere det synlige område, flyt din musemarkør til kanten af skærmen, eller brug piletasterne. En anden måde er at venstre-klikke på dit minimap (øverste venstre hjørne af skærmen).
+
+WillBeUsingIndian=I denne introduktion styrer du indianerne. Den indianske fraktion kæmper med bueskytter og simple våben.
+
+NeedWorkers=Først skal vi bruge en arbejder. Får at få en, venstre klik på Hovedtipien og start træningen af en arbejder. For at gøre dette skal du bruge 'Producer Arbejder'-kommandoen, ved at trykke på arbejder ikonet.
+
+;------------------------------------------After produce Worker------------------------------------------------
+
+Select=Venstreklik nu på din arbejder. Detaljerne for den valgte enhed, navnlig enhedens navn og billede er nu vist i højre øverste hjørne af din skærm. Nedenunder er vist livspoint (HP), panser, og i parenteser, pansertype og hvor langt enheden kan se (sight).
+Select2=Hvis dette er en kampenhed, vil antallet af fjender den har nedlagt blive vist herefter. Hvis enheden bruger ressourcer, vil det blive vist i det følgende felt. Nedenunder dette vil der stå hvad enhedens er beordret til at gøre lige nu.
+
+ExampleWorker=For eksempel: Din arbejder har 600 HP, 0 læderrustning og et synsfelt på 9. Hans nuværende tilstand er "stop", så han laver ikke noget.
+
+Command=Enhedens evner er vist længere nede. Nu gennemgår vi alle de kommandoer som arbejderen kan udføre.
+
+FirstCommand=Det første kommandoikon er 'stop'. Hvis du klikker på dette ikon så vil arbejderen straks stoppe med det han er i gang med. Alle enheder (som ikke er bygninger) har denne kommando.
+
+SecondCommand=Det andet kommandoikon er 'flyt'. Hvis du klikker på det skal du derefter klikke på jorden eller en anden enhed for at markere hvor den skal gå hen. En genvej til denne kommando er at højreklikke der hvor den skal gå hen.
+SecondCommand2=Når du holder musemarkøren over 'flyt' kommandoikonet, bliver arbejderens bevægelseshastighed vist. Denne kommando er også tilgængelig for alle enheder (på nær bygninger)
+
+TestSecondCommand=Prøv 'flyt' kommandoen nu. Flyt din arbejder til den anden arbejder som venter udenfor din lejer. Den anden arbejder kan ses på minikortet (øverste til venstre) som en rød prik. Den hvide trekant på minikortet viser hvad du kikker på. Den store røde prik er din Hovedtipi.
+
+;------------------------------------------Move Back Worker and give Harvest gold command------------------------------------------------
+
+MoveBack=Godt. Lad nu begge arbejdere gå tilbage til Hovedtipien. For at vælge flere enheder på en gang, hold shift nede og flyt musen til du har en firkantet boks rundt om dine enheder ELLER ...
+MoveBack2=... Hold shift nede, og klik så på hver enkelt enhed du vil have valgt ELLER ...
+MoveBack3=... dobbelt-klik på en enhed for at vælge alle enheder af den samme type (arbejdere i dette tilfælde).
+HarvestGoldandStone=Når dine enheder har nået dit hjem, vil vi bruge det fjerde kommandoikon, som bruges til at indsamle guld eller sten.
+HarvestGoldandStone2=Hold musen over dette kommandoikon for at se hvor hurtigt arbejdere kan indsamle, hvor meget hverenkelt arbejder kan indsamle, hvor hurtigt de kan gå med ressourcer og hvilke ressourcer de overhovedet kan indsamle.
+UseHarvestGoldandStone=For at bruge denne kommando, klik først på kommandoikonet, derefter på ressourcen som du ønsker at høste. De grå bunker med gule prikker er guld, dem uden er sten.
+HarvestGoldandStone3=Grav nu efter guld og sten indtil du har i alt 600 guld og 550 sten. Du kan også bygge nye arbejdere for at hjælpe dig (husk dog at dette også vil koste dig guld). Du kan se øverst på skærmen hvor mange af de forskellige ressourcer du har lagret.
+
+;------------------------------------------Get Wood------------------------------------------
+
+HarvestGoldAndStoneDone=Nu mangler du kun en smule træ. For at skaffe noget, brug det femte kommandoikon. Dette er også en indsamlingskommando, så du kan bruge den på samme måde som dem for guld og sten.
+ResourceInformation=I øvrigt har indianerfaktionen mest brug for guld og træ.
+GetWood=Endnu et tip: Du kan bruge indsamlingskommandoen hurtigere ved at vælge din arbejde og derefter højre-klikke på den ressource du gerne vil indsamle, for at få arbejderen i gang. Du vil se en gul pil hvis du har gjort det korrekt. Indsaml nu træ indtil du har 550 lagret.
+
+;------------------------------------------Learn meeting Point and build a tent-------------------------------------------------------
+
+MeetingPoint=Når du vælger en bygning bliver der vist en blå pil. Denne pil peger på det såkaldte "samlingspunkt". Alle enheder du producerer med bygningen vil gå til dette sted så snart de er færdigproducerede.
+UseMeetingPoint=Du kan flytte samlingspunktet: Klik på flag-ikonet, derefter på positionen hvor det nye samlingspunkt skal være. På samme måde som med gang kan du gøre det samme ved at højreklikke på den ønskede position.
+MeetingPoint2=Hvis du placerer samlingspunktet på en ressource, så vil nye arbejdere straks gå igang med at høste. Vær omhyggelig med at ramme det rigtige punkt, ellers vil dine arbejdere bare stå stille og være i vejen.
+Thirdcommand=Nu til arbejderens tredie kommandoikon - 'byg' kommandoen.
+Thirdcommand2=Ved at klikke på det går du ind i byggemenuen. Hvis du holder musemarkøren over et af byggeikonerne kan du se alle ressourcer og mål der kræves for at kunne bygge den.
+Thirdcommand3=Hvis du holder musen over teltet kan du se det kræver 30 guld, 50 træ, -10 boliger, og en hovedtipi. "-10 boliger" betyder at du får plads til 10 ekstra enheder ved at bygge et telt. Nogen enheder kræver dog mere end en bolig.
+Thirdcommand4=Lad os bygge et telt nu. Klik på byggemenuen, derefter på teltet og placer det på en ledig plads.
+
+;--------------------------------------------------stickfighter----------------------------------------------------------------
+
+
+ProduceStickfighter=Du kan nu træne en stavkæmper i dit nye telt.
+
+;objective strings
+ProduceWorker=Opgave: Træn en arbejder.
+ProduceStickfighter2=Opgave: Træn en stavkæmper
+MoveWorker=Opgave: Flyt din nye arbejder til den anden arbejder som venter udenfor din lejer.
+HarvestGoldandStoneobjective=Opgave: Høst guld og sten indtil du har 600 guld og 550 sten.
+GetWoodob=Opgave: Høst træ indtil du har 550.
+UseThirdCommand=Opgave: Byg et telt. Vink: Hvis teltet er rødt betyder det at denne plads er optaget (f.eks. af en anden enhed eller et træ).
+
+;end
+
+WellDoneNextTutorial=Godt arbejde! Du kan nu fortsætte til næste tutorial.

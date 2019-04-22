@@ -1,0 +1,38 @@
+TUTORIAL_NAME=#2 - Základní tutoriál
+;message headers
+GlestBasicTutorial=MegaGlest základní tutoriál
+WellDone=Výborně!
+Resources=Zdroje
+Combat=Boj
+Buildings=Budovy
+
+;message strings
+Welcome=Vítejte v MegaGlest základním tutoriálu. Zde se naučíte základy hry.
+WillBeUsingTech=Budete velet frakci techniků, která k boji využívá středověké bojovníky a mechanická zařízení.
+NeedWorkers=Ke sklizni zdrojů budete potřebovat dělníky. K produkci nějakého vyberte hrad a použijte příkaz "produkovat dělníka".
+SelectAndCommand=Jednotky vyberete, když na ně kliknete levým tlačítkem myši, příkazy se poté stanoví kliknutím pravým tlačítkem myši na cíl nebo na terén.
+HowToMine=Chcete-li dobývat zlato, nejprve vyberte dělníka, pak klikněte pravým tlačítkem myši na zlato.
+WorkersKeepOnHarvesting=Dělníci budou sklízet a přenášet zdroje do budov, ve kterých lze daný typ zdroje ukládat.
+ResourceInformation=Informace o zdrojích se zobrazí v horní části obrazovky, číslo na levé straně je aktuální množství, číslo na pravé straně je skladovací kapacita.
+OtherResources=Jiné zdroje jako dřevo nebo kámen se sklízejí stejným způsobem jako zlato.
+TechResourceNeeds=Frakce techniků obvykle potřebuje hodně zlata a dřeva a trochu kamene.
+TechConsumesFood=Každá jednotka frakce techniků konzumuje potravu. Bez potravy se jednotky poškodí a umírají. Potravu mohou produkovat hospodářská zvířata. Zvířata jsou produkována na farmě.
+HaveEnoughAnimals=Vždy si hlídejte, abyste měli dostatek zvířat pro potravu svých jednotek.
+BalanceDisplay=Rovnováha mezi spotřebou a produkcí potravy se zobrazuje v závorkách vedle množství zásob potravy v horní části obrazovky.
+TechWarriorsAtBarracks=Chcete-li porazit svého nepřítele, budete potřebovat nějaké bojovníky, většina bojovníků z frakce techniků je produkována v kasárnách.
+HowToBuildBarracks=Chcete-li postavit kasárna, vyberte dělníka, klikněte na "stavět základy" > "kasárna" a vyberte si místo pro stavbu.
+RememberToBuildBarracks=Nezapomeňte postavit kasárna vždy hned na začátku, to vám umožní rychle produkovat bojovníky.
+SwordmanBrief=Základní bojovník frakce techniků je šermíř, vyberte kasárna a poté klikněte na "produkovat šermíře" k produkci jednoho. Ujistěte se, že k tomu máte dostatek zdrojů.
+HaveWarriorsAtBase=Vždy byste měli mít nějaké bojovníky ve své základně, budou automaticky útočit na všechny nepřátele v dosahu.
+ArcherBrief=Lučištníci jsou základní jednotka k boji na dálku ve frakci techniků. Také se produkují v kasárnách.
+ProduceWarriors=Produkujte několik dalších bojovníků k obraně své základny před nepřátelskými útoky.
+
+;objective strings
+ProduceWorkers=Úkol: Produkujte 3 dělníky.
+HarvestWoodAndStone=Úkol: Skliďte 100 jednotek dřeva a 150 jednotek kamene.
+ProduceCow=Úkol: Produkujte krávu.
+MineGold=Úkol: Vydolujte 100 jednotek zlata.
+BuildBarracks=Úkol: Postavte kasárna.
+ProduceSwordman=Úkol: Produkujte šermíře.
+ProduceArcher=Úkol: Produkujte lučištníka.
+ProduceMoreWarriors=Úkol: Produkujte více bojovníků, abyste se mohli vypořádat s blížícím se útokem.

@@ -1,0 +1,181 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="4" />
+		<height value="5" />
+		<max-hp value="6000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="20" />
+		<armor-type value="structure"/>
+		<sight value="6" />
+		<time value="100" />
+		<multi-selection value="false" />
+		<cellmap value="true">
+			<row value="0110"/>
+			<row value="1111"/>
+			<row value="1111"/>
+			<row value="0110"/>
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false" />
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements />
+		<resource-requirements>
+			<resource name="gold" amount="500" />
+		</resource-requirements>
+		<resources-stored />
+		<image path="images/hangar.bmp" />
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="true" image-path="images/meetingpoint.bmp"/>
+		<selection-sounds enabled="true">
+			<sound path="sounds/steammach.wav" />
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="sounds/steammach.wav" />
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+		<!-- *** skill 0 *** -->
+		<skill>
+			<type value="stop"/>	
+			<name value="stop_skill"/>
+			<ep-cost value="0" />
+			<speed value="50" />
+			<anim-speed value="100" />
+			<animation path="hangar.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<!-- *** skill 1 *** -->
+		<skill>
+			<type value="be_built" />	
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="hangarbuild.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+		<!-- *** skill 2 *** -->
+		<skill>
+			<type value="upgrade"/>	
+			<name value="upgrade_skill"/>	
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="300" />
+			<animation path="hangar.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<!-- *** skill 3 *** -->
+		<skill>
+			<type value="produce"/>
+			<name value="produce_skill"/>	
+			<ep-cost value="0" />
+			<speed value="500" />
+			<anim-speed value="300" />
+			<animation path="hangar.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+		<!-- *** skill 4 *** -->
+		<skill>
+			<type value="die" />	
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="dead/hangardie.g3d" />
+			<sound enabled="true" start-time="0">
+				<sound-file path="/sounds/tech_building_fall4.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>
+	
+		<!-- *** command 0 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_cargo_ship" />
+			<image path="../cargo_ship/images/baloon.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="cargo_ship"/>
+		</command>
+		<command>
+			<type value="produce"/>
+			<name value="deploy_fighter" />
+			<image path="../fighter/images/fighter.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="fighter"/>
+		</command>
+		<command>
+			<type value="produce"/>
+			<name value="deploy_frigate" />
+			<image path="../frigate/images/blimp.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="frigate"/>
+		</command>
+		<!-- *** command 1 *** -->
+		<command>
+			<type value="produce"/>
+			<name value="deploy_bomber" />
+			<image path="../bomber/images/gunship.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="bomber"/>
+		</command>
+
+		<command>
+			<type value="produce"/>
+			<name value="deploy_privateer" />
+			<image path="../privateer/images/privateer.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="privateer"/>
+		</command>
+		
+		<command>
+			<type value="produce"/>
+			<name value="deploy_jet_fighter" />
+			<image path="../jet_fighter/images/fighter.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="jet_fighter"/>
+		</command>
+
+		<command>
+			<type value="produce"/>
+			<name value="deploy_airship" />
+			<image path="../airship/images/blimp.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<produce-skill value="produce_skill"/>
+			<produced-unit name="airship"/>
+		</command>
+
+	</commands>
+</unit>

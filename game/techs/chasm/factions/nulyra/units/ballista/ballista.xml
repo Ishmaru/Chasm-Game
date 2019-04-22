@@ -1,0 +1,186 @@
+<?xml version="1.0" standalone="no"?>
+
+<unit>
+
+	<!-- *** parameters *** -->
+
+	<parameters>
+		<size value="1"/>
+		<height value="2"/>
+		<max-hp value="600" regeneration="5"/>
+		<max-ep value="0"/>
+		<armor value="0"/>	
+		<armor-type value="scout"/>				
+		<sight value="13"/>
+		<time value="45"/>	
+		<multi-selection value="true"/>	
+		<cellmap value="false"/>
+		<levels>
+			<level name="experenced" kills="2"/>
+			<level name="veteran" kills="4"/>
+			<level name="elite" kills="8"/>
+		</levels>
+		<fields>
+			<field value="land"/>
+		</fields>	
+		<properties/>
+		<light enabled="false"/>
+		<unit-requirements>
+			<unit name="citadel" />
+		</unit-requirements>
+		<upgrade-requirements/>
+		<resource-requirements>
+			<resource name="gold" amount="175"/>
+			<resource name="food" amount="1"/>				
+		</resource-requirements>
+		<resources-stored/>
+		<image path="images/balistainfantry.bmp"/>
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+			<sound path="sounds/malea_select1.wav"/>
+			<sound path="sounds/malea_select2.wav"/>
+			<sound path="sounds/malea_select3.wav"/>
+			<sound path="sounds/malea_select4.wav"/>
+			<sound path="sounds/malea_select5.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="sounds/malea_ack1.wav"/>
+			<sound path="sounds/malea_ack2.wav"/>
+			<sound path="sounds/malea_ack3.wav"/>
+			<sound path="sounds/malea_ack4.wav"/>
+		</command-sounds>
+	</parameters>
+
+
+	<!-- *** skills *** -->
+
+	<skills>
+	
+		<skill>
+			<type value="stop"/>
+			<name value="stop_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="1000"/>
+			<anim-speed value="20"/>
+			<animation path="balistainfantrystand.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+		
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="180"/>
+			<anim-speed value="125"/>
+			<animation path="balistainfantryrun.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="move"/>
+			<name value="run_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="280"/>
+			<anim-speed value="220"/>
+			<animation path="balistainfantryrun.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+		<skill>
+			<type value="attack"/>
+			<name value="attack_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="300"/>
+			<anim-speed value="40"/>
+			<animation path="balistainfantryshoot.g3d"/>
+			<sound enabled="true" start-time="0.0">
+				<sound-file path="/sounds/trench_attack.wav"/>
+
+			</sound>
+			<attack-strenght value="80"/>
+			<attack-var value="25"/>
+			<attack-range value="12"/>
+			<attack-type value="bombard"/>
+			<attack-start-time value="0.0"/>
+			<attack-fields>
+				<field value="land"/>
+			</attack-fields>
+			<projectile value="true">
+				<particle value="true" path="particle_proj.xml"/>
+				<sound enabled="true">
+					<sound-file path="/sounds/bullet_hit.wav"/>
+
+				</sound>
+			</projectile>
+			<splash value="true">
+				<radius value="0"/>
+				<damage-all value="true"/>
+				<particle value="true" path="particle_splash.xml"/>
+
+			</splash>
+		</skill>
+		
+		<skill>
+			<type value="die"/>
+			<name value="die_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="60"/>
+			<anim-speed value="80"/>
+			<animation path="balistainfantrydie.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/malea_die1.wav"/>
+				<sound-file path="sounds/malea_die2.wav"/>
+				<sound-file path="sounds/malea_die3.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+
+	</skills>
+
+	<!-- *** commands *** -->
+	
+	<commands>
+		
+		<command>
+			<type value= "stop"/>
+			<name value="stop"/>
+			<image path="../castle/images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+
+		<command>
+			<type value="move"/>
+			<name value="move"/>
+			<image path="../castle/images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+
+		<command>
+			<type value="attack"/>
+			<name value="attack"/>
+			<image path="../castle/images/antitank.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="attack_skill"/>
+		</command>
+		
+		<command>
+			<type value="attack_stopped"/>
+			<name value="hold_position"/>
+			<image path="../castle/images/hold.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+			<attack-skill value="attack_skill"/>
+		</command>
+
+		
+	</commands>
+</unit>

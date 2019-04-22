@@ -1,0 +1,127 @@
+<?xml version="1.0" standalone="no"?>
+
+<tech-tree>
+	<description value="chasm tech tree"/>
+	
+	<attack-types>
+		<attack-type name="normal"/>
+		<attack-type name="worker"/>
+		<attack-type name="heavy"/>
+		<attack-type name="light"/>
+		<attack-type name="bombard"/>
+		<attack-type name="vulcan"/>
+		<attack-type name="heli"/>
+		<attack-type name="antiair"/>
+		<attack-type name="firebomb"/>
+	</attack-types>
+	
+	<armor-types>
+		<armor-type name="normal"/>
+        <armor-type name="scout"/>
+		<armor-type name="armored"/>
+		<armor-type name="shield"/>
+		<armor-type name="light"/>
+		<armor-type name="structure"/>
+		<armor-type name="air"/>
+		<armor-type name="heli"/>
+		<armor-type name="hero"/>
+	</armor-types>
+	
+	<damage-multipliers>
+
+		<damage-multiplier attack="normal" armor="normal" value="1.0"/>
+		<damage-multiplier attack="normal" armor="armored" value="0.2"/>
+		<damage-multiplier attack="normal" armor="light" value="0.8"/>
+		<damage-multiplier attack="normal" armor="structure" value="1"/>
+		<damage-multiplier attack="normal" armor="scout" value="1.0"/>
+		<damage-multiplier attack="normal" armor="air" value=".5"/>
+		<damage-multiplier attack="normal" armor="heli" value=".8"/>
+		<damage-multiplier attack="normal" armor="hero" value=".2"/>
+		<damage-multiplier attack="normal" armor="shield" value="0.5"/>
+
+
+		<damage-multiplier attack="worker" armor="normal" value="1"/>
+		<damage-multiplier attack="worker" armor="armored" value="0.1"/>
+		<damage-multiplier attack="worker" armor="light" value="0.7"/>
+		<damage-multiplier attack="worker" armor="structure" value="0.1"/>
+		<damage-multiplier attack="worker" armor="scout" value="1"/>
+		<damage-multiplier attack="worker" armor="air" value=".1"/>
+		<damage-multiplier attack="worker" armor="heli" value=".1"/>
+		<damage-multiplier attack="worker" armor="hero" value=".2"/>
+		<damage-multiplier attack="worker" armor="shield" value="0.5"/>
+
+		<damage-multiplier attack="vulcan" armor="normal" value="0.7"/>
+		<damage-multiplier attack="vulcan" armor="armored" value="0.5"/>
+		<damage-multiplier attack="vulcan" armor="light" value="0.7"/>
+		<damage-multiplier attack="vulcan" armor="structure" value="0.7"/>
+		<damage-multiplier attack="vulcan" armor="scout" value="0.7"/>
+		<damage-multiplier attack="vulcan" armor="air" value=".6"/>
+		<damage-multiplier attack="vulcan" armor="heli" value=".8"/>
+		<damage-multiplier attack="vulcan" armor="hero" value=".3"/>
+		<damage-multiplier attack="vulcan" armor="shield" value="0.8"/>
+
+
+		<damage-multiplier attack="heavy" armor="normal" value="1"/>
+		<damage-multiplier attack="heavy" armor="armored" value="1.8"/>
+		<damage-multiplier attack="heavy" armor="light" value="1.6"/>
+		<damage-multiplier attack="heavy" armor="structure" value="1.0"/>
+		<damage-multiplier attack="heavy" armor="scout" value="0.7"/>
+		<damage-multiplier attack="heavy" armor="hero" value=".2"/>
+		<damage-multiplier attack="heavy" armor="shield" value="1"/>
+		<damage-multiplier attack="heavy" armor="air" value="2.0"/>
+		<damage-multiplier attack="heavy" armor="heli" value="2.0"/>
+
+
+		<damage-multiplier attack="bombard" armor="normal" value="1.0"/>
+		<damage-multiplier attack="bombard" armor="armored" value="1.0"/>
+		<damage-multiplier attack="bombard" armor="light" value=".8"/>
+		<damage-multiplier attack="bombard" armor="structure" value="2.0"/>
+		<damage-multiplier attack="bombard" armor="scout" value=".3"/>
+		<damage-multiplier attack="normal" armor="hero" value=".2"/>
+		<damage-multiplier attack="bombard" armor="shield" value="0.8"/>
+
+
+		<damage-multiplier attack="light" armor="normal" value="1.8"/>
+		<damage-multiplier attack="light" armor="armored" value="0.05"/>
+		<damage-multiplier attack="light" armor="light" value=".8"/>
+		<damage-multiplier attack="light" armor="structure" value="0.05"/>
+		<damage-multiplier attack="light" armor="scout" value="0.8"/>
+		<damage-multiplier attack="normal" armor="hero" value=".2"/>
+		<damage-multiplier attack="light" armor="shield" value="0.5"/>
+
+
+
+		<damage-multiplier attack="antiair" armor="heli" value="1.1"/>
+		<damage-multiplier attack="antiair" armor="air" value="1.1"/>
+		<damage-multiplier attack="antiair" armor="normal" value="0.15"/>
+		<damage-multiplier attack="antiair" armor="armored" value="0.15"/>
+		<damage-multiplier attack="antiair" armor="light" value="0.15"/>
+		<damage-multiplier attack="antiair" armor="structure" value="0.1"/>
+		<damage-multiplier attack="antiair" armor="scout" value="0.7"/>
+		<damage-multiplier attack="antiair" armor="shield" value="0.2"/>
+		
+		
+		
+		
+		<damage-multiplier attack="heli" armor="normal" value="1.2"/>
+		<damage-multiplier attack="heli" armor="armored" value="0.6"/>
+		<damage-multiplier attack="heli" armor="light" value="0.8"/>
+		<damage-multiplier attack="heli" armor="structure" value="0.3"/>
+		<damage-multiplier attack="heli" armor="scout" value="1.5"/>
+		<damage-multiplier attack="heli" armor="air" value=".6"/>
+		<damage-multiplier attack="heli" armor="heli" value=".6"/>
+		<damage-multiplier attack="heli" armor="hero" value=".2"/>
+
+		<damage-multiplier attack="firebomb" armor="normal" value="1.2"/>
+		<damage-multiplier attack="firebomb" armor="armored" value="1.5"/>
+		<damage-multiplier attack="firebomb" armor="light" value="1.2"/>
+		<damage-multiplier attack="firebomb" armor="structure" value="2.3"/>
+		<damage-multiplier attack="firebomb" armor="scout" value="1.0"/>
+		<damage-multiplier attack="firebomb" armor="air" value="1.2"/>
+		<damage-multiplier attack="firebomb" armor="heli" value="1.2"/>
+		<damage-multiplier attack="firebomb" armor="hero" value=".2"/>
+		<damage-multiplier attack="firebomb" armor="shield" value="1"/>
+
+		
+	</damage-multipliers>
+</tech-tree>

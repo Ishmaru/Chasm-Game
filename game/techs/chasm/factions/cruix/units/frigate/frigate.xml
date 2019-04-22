@@ -1,0 +1,244 @@
+<?xml version="1.0" standalone="no"?>
+
+<unit>
+	<parameters>
+		<size value="3"/>
+		<height value="1"/>
+		<max-hp value="3200" regeneration="8"/>
+		<max-ep value="0"/>
+		<armor value="30"/>			
+		<armor-type value="air"/>
+		<sight value="20"/>
+		<time value="100"/>	
+		<multi-selection value="true"/>	
+		<cellmap value="false"/>
+		<levels>
+			<level name="veteran" kills="15"/>
+			<level name="elite" kills="45"/>
+		</levels>
+		<fields>
+			<field value="air"/>
+		</fields>	
+		<properties/>
+			<light enabled="false"/>
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements>
+		</upgrade-requirements>
+		<resource-requirements>
+			<resource name="gold" amount="700"/>
+			<resource name="oil" amount="400"/>
+                        <resource name="food" amount="6"/>					
+		</resource-requirements>
+		<resources-stored/>
+		<image path="images/blimp.bmp"/>
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="false"/>
+		<selection-sounds enabled="true">
+			<sound path="/sounds/gunship_select1.wav"/>
+			<sound path="/sounds/gunship_select2.wav"/>
+			<sound path="/sounds/gunship_select3.wav"/>
+			<sound path="/sounds/gunship_select4.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="/sounds/gunship_ack1.wav"/>
+			<sound path="/sounds/gunship_ack2.wav"/>
+			<sound path="/sounds/gunship_ack3.wav"/>
+			<sound path="/sounds/gunship_ack4.wav"/>
+			<sound path="/sounds/gunship_ack5.wav"/>
+			<sound path="/sounds/gunship_ack6.wav"/>
+			<sound path="/sounds/gunship_ack7.wav"/>		
+		</command-sounds>
+
+	</parameters>
+	<attack-boosts>
+		<attack-boost name="repair">
+			<allow-multiple-boosts value="false" />
+			<radius value="8" />
+			<target value="faction">
+					<unit-type name="fighter" />
+					<unit-type name="gunship" />
+				</target>
+			<max-hp value="0" regeneration="15"/>
+			<max-ep value="0" regeneration="1"/>
+			<sight value="0" />
+			<attack-strenght value="0"/>
+			<attack-range value="0" />
+			<armor value="0" />
+			<move-speed value="0"/>
+			<production-speed value="0" />
+				<particles value="true">
+					<affected-particle-file path="repair.xml"/>
+				</particles>
+		</attack-boost>
+	</attack-boosts>
+
+	<skills>
+	
+		<skill>
+			<type value="stop"/>
+			<name value="stop_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="1000"/>
+			<anim-speed value="20"/>
+			<animation path="frigate/frigatestand.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/idle.wav"/>
+			</sound>
+			<attack-boost name="repair" />
+		</skill>
+		
+		<skill>
+			<type value="move"/>
+			<name value="move_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="150"/>
+			<anim-speed value="100"/>
+			<animation path="frigate/frigatestand.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/fly.wav"/>
+			</sound> 
+			<attack-boost name="repair" />
+		</skill>
+                
+        <skill>
+			<type value="attack"/>
+			<name value="air_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="220"/>
+			<anim-speed value="220"/>
+			<animation path="frigate/frigateshoot.g3d"/>
+				<particles value="true" start-time="0.1" end-time="0.2">	
+				<particle-file path="cannon_particles.xml"/>
+				</particles>
+			<sound enabled="true" start-time="0.1">
+				<sound-file path="sounds/heavy_vulcan.wav"/>
+			</sound>
+			<attack-strenght value="120"/>
+			<attack-var value="80"/>
+			<attack-range value="13"/>
+			<attack-type value="antiair"/>
+			<attack-start-time value="0.1"/>
+			<attack-fields>
+				<field value="air"/>
+			</attack-fields>
+			<projectile value="true">
+				<particle value="true" path="particle_proj.xml"/>
+				<sound enabled="true">
+					<sound-file path="sounds/gunship_hit.wav"/>
+				</sound>
+			</projectile>
+			<splash value="true">
+				<radius value="0"/>
+				<damage-all value="true"/>
+				<particle value="true" path="particle_splash.xml"/>
+
+			</splash>
+			<attack-boost name="repair" />
+		</skill>	
+
+        <skill>
+			<type value="attack"/>
+			<name value="land_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="220"/>
+			<anim-speed value="220"/>
+			<animation path="frigate/frigatestand.g3d"/>
+			<sound enabled="true" start-time="0.1">
+				<sound-file path="sounds/heavy_vulcan.wav"/>
+			</sound>
+			<attack-strenght value="120"/>
+			<attack-var value="80"/>
+			<attack-range value="8"/>
+			<attack-type value="vulcan"/>
+			<attack-start-time value="0.1"/>
+			<attack-fields>
+				<field value="land"/>
+			</attack-fields>
+			<projectile value="true">
+				<particle value="true" path="particle_proj2.xml"/>
+				<sound enabled="true">
+					<sound-file path="sounds/gunship_hit.wav"/>
+				</sound>
+			</projectile>
+			<splash value="true">
+				<radius value="0"/>
+				<damage-all value="true"/>
+				<particle value="true" path="particle_splash.xml"/>
+
+			</splash>
+			<attack-boost name="repair" />
+		</skill>			
+		
+		
+        <skill>
+			<type value="die"/>
+			<name value="die_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="120"/>
+			<anim-speed value="30"/>
+			<animation path="frigate/frigatedie.g3d"/>
+			<sound enabled="true" start-time="0">
+				<sound-file path="sounds/gunship_die1.wav"/>
+				<sound-file path="sounds/gunship_die2.wav"/>
+				<sound-file path="sounds/gunship_die3.wav"/>
+			</sound>
+                        <fade value="false"/>
+		</skill>
+
+	</skills>
+	
+	<commands>
+		
+                <command>
+			<type value="stop"/>
+			<name value="stop"/>
+			<image path="../castle/images/stop.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+		</command>
+                
+		<command>
+			<type value="move"/>
+			<name value="move"/>
+			<image path="../castle/images/move.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+		</command>
+              
+        <command>
+			<type value="attack"/>
+			<name value="anti_air"/>
+			<image path="../castle/images/antiair.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="air_skill"/>
+		</command>
+
+        <command>
+			<type value="attack"/>
+			<name value="land_attack"/>
+			<image path="../castle/images/attack.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<move-skill value="move_skill"/>
+			<attack-skill value="land_skill"/>
+		</command>			
+		
+        <command>
+			<type value="attack_stopped"/>
+			<name value="hold_position"/>
+			<image path="../castle/images/hold.bmp"/>
+			<unit-requirements/>
+			<upgrade-requirements/>
+			<stop-skill value="stop_skill"/>
+			<attack-skill value="air_skill"/>
+		</command>
+
+
+
+	</commands>
+</unit>

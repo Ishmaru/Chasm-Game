@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<menu>
+	<menu-background-model value="data/core/menu/main_model/menu_main.g3d"/>
+	<water value="false"/>
+	<rain value="false"/>
+	<fog value="false"/>
+	<camera>
+		<start-position x="0" y="0" z="25"/>
+		<root-position x="0" y="0" z="16"/>
+		<about-position x="-2" y="8" z="10"/>
+		<config-position x="-4" y="-9" z="7"/>
+		<info-position x="5" y="6" z="-5"/>
+		<new-game-position x="-4" y="4" z="7"/>
+		<connected-game-position x="-4" y="4" z="7"/>		
+		<join-game-position x="10" y="-2" z="7"/>
+		<scenario-position x="10" y="-2" z="7"/>
+		<mods-position x="0" y="20" z="-5"/>
+		<masterserver-position x="-4" y="4" z="7"/>
+		
+		
+		<start-rotation x="30" y="0" z="0"/>
+		<root-rotation x="0" y="0" z="0"/>
+		<about-rotation x="0" y="-30" z="0"/>
+		<config-rotation x="30" y="0" z="0"/>
+		<info-rotation x="0" y="25" z="0"/>
+		<new-game-rotation x="0" y="0" z="0"/>
+		<connected-game-rotation x="0" y="0" z="0"/>
+		<join-game-rotation x="0" y="40" z="0"/>
+		<scenario-rotation x="0" y="40" z="0"/>
+		<mods-rotation x="0" y="40" z="0"/>
+		<masterserver-rotation x="0" y="0" z="0"/>
+		
+	</camera>
+	
+	<intro>
+
+		<intro-time value="47500"/>
+		<appear-time value="1000"/>
+		<show-time value="1500"/>
+		<disappear-time value="1000"/>
+		<menu-music-path value="/menu/music/"/>
+		<menu-intro-music value="intro_music.ogg"/>
+		<menu-music value="menu_music.ogg"/>
+		<show-intro-pictures value="8" random="true" time="2500"/>
+		<show-intro-models value="false" random="true" min-anim-speed="0.010" max-anim-speed="0.6"/>
+<!--
+		<intro-time value="24000"/>
+		<appear-time value="2000"/>
+		<show-time value="1500"/>
+		<disappear-time value="2000"/>
+		<menu-music-path value="/menu/music/"/>
+		<menu-intro-music value="intro_music.ogg"/>
+		<menu-music value="menu_music.ogg"/>
+		<show-intro-pictures value="0" random="false" time="0"/>
+		<show-intro-models value="false" random="false" min-anim-speed="0" max-anim-speed="0"/>
+-->
+
+		<camera>
+			<start-position x="6" y="8.5" z="11"/>
+			<start-rotation x="0" y="-80" z="0"/>
+		</camera>
+
+	</intro>
+</menu>
+

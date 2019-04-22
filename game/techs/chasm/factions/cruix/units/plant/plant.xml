@@ -1,0 +1,148 @@
+<?xml version="1.0" standalone="no" ?>
+<unit>
+	<!-- *** parameters *** -->
+	<parameters>
+		<size value="3" />
+		<height value="5" />
+		<max-hp value="6000" regeneration="0"/>
+		<max-ep value="0" />
+		<armor value="20" />
+		<armor-type value="structure"/>				
+		<sight value="5" />
+		<time value="100" />
+		<multi-selection value="false" />
+		<count-in-victory-conditions value="false"/>
+		<cellmap value="true">
+			<row value="111" /> 
+			<row value="111" />  
+			<row value="111" />  
+		</cellmap>
+		<levels/>
+		<fields>
+			<field value="land" />
+		</fields>
+		<properties>
+			<property value="burnable"/>
+		</properties>
+		<light enabled="false" />
+		<unit-requirements>
+		</unit-requirements>
+		<upgrade-requirements />
+		<resource-requirements>
+			<resource name="gold" amount="500"/>
+			<resource name="oil" amount="100"/>
+		</resource-requirements>
+		<resources-stored>
+
+		</resources-stored>
+		<image path="images/plant.bmp"/>
+		<image-cancel path="../castle/images/cancel.bmp"/>
+		<meeting-point value="true" image-path="../factory/images/meetingpoint.bmp"/>
+		<selection-sounds enabled="true">
+			<sound path="../factory/sounds/steammach.wav"/>
+		</selection-sounds>
+		<command-sounds enabled="true">
+			<sound path="../factory/sounds/steammach.wav"/>
+		</command-sounds>
+	</parameters>
+	
+	<!-- *** skills *** -->
+	<skills>
+
+		<skill>
+			<type value="be_built" />
+			<name value="be_built_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300"/>
+			<speed value="300"/>
+			<anim-speed value="50" />
+			<animation path="armorybuild.g3d" />
+			<sound enabled="false" />
+		</skill>
+		
+		<skill>
+			<type value="stop" />
+			<name value="stop_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="plantstand.g3d" />
+			<sound enabled="false" />
+		</skill>	
+		
+
+		<skill>
+			<type value="die" />
+			<name value="die_skill"/>		
+			<ep-cost value="0" />
+			<speed value="300" />
+			<anim-speed value="50" />
+			<animation path="dead/plantdie.g3d" />
+			<sound enabled="true" start-time="0">
+				<sound-file path="../factory/sounds/tech_building_fall4.wav"/>
+			</sound>			
+			<fade value="false"/>
+		</skill>
+
+                <skill>
+			<type value="upgrade"/>
+			<name value="upgrade_skill"/>		
+			<ep-cost value="0"/>
+			<speed value="300"/>
+			<anim-speed value="300"/>
+			<animation path="plantstand.g3d"/>
+			<sound enabled="false"/>
+		</skill>
+
+	</skills>
+	
+	<!-- *** commands *** -->
+	<commands>
+	
+
+			
+		<command>
+			<type value="upgrade"/>
+			<name value="upgrade_ap_shell" />
+			<image path="../../upgrades/ap_shell/images/apshell.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<upgrade-skill value="upgrade_skill"/>
+			<produced-upgrade name="ap_shell"/>
+		</command>
+		
+
+		<command>
+			<type value="upgrade"/>
+			<name value="upgrade_heavy_armor" />
+			<image path="../../upgrades/heavy_armor/images/armor.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<upgrade-skill value="upgrade_skill"/>
+			<produced-upgrade name="heavy_armor"/>
+		</command>
+
+		<command>
+			<type value="upgrade"/>
+			<name value="upgrade_engines" />
+			<image path="../../upgrades/desel_engines/images/engine.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<upgrade-skill value="upgrade_skill"/>
+			<produced-upgrade name="desel_engines"/>
+		</command>
+
+		<command>
+			<type value="upgrade"/>
+			<name value="upgrade_turbines" />
+			<image path="../../upgrades/turbines/images/turbines.bmp" />
+			<unit-requirements />
+			<upgrade-requirements />
+			<upgrade-skill value="upgrade_skill"/>
+			<produced-upgrade name="turbines"/>
+		</command>
+
+		
+
+	</commands>
+</unit>
