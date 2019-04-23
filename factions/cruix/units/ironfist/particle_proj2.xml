@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <projectile-particle-system>
-    	<texture value="true" path="../../../../../../data/core/misc_textures/particle_1.bmp" luminance="true"/>
+    	<texture value="true" path="../../../../particles/images/particle_1.bmp" luminance="true"/>
     	<model value="true" path="rocket/shell.g3d"/>
 	<primitive value="quad"/>
 	<offset x="0" y="-1.3" z="-1"/>

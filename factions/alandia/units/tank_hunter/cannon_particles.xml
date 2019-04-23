@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <unit-particle-system>
-    	<texture value="true" path="../../../../../../data/core/misc_textures/particle_2.bmp" luminance="true"/>
+    	<texture value="true" path="../../../../particles/images/particle_2.bmp" luminance="true"/>
 
 	<primitive value="quad"/>
 	<offset x="0" y="-0.5" z="1.0"/>

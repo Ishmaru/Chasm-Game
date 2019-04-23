@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <projectile-particle-system>
-    	<texture value="true" luminance="true" path="../../../../../../data/core/misc_textures/particle_1.bmp"/>
+    	<texture value="true" luminance="true" path="../../../../particles/images/particle_1.bmp"/>
     	<model value="true" path="models/bullet.g3d"/>
 	<primitive value="line"/>
 	<offset x="0" y="-.2" z="1"/>
